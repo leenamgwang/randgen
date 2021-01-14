@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function randgen(){
+                var newrand = Math.random()*6;
+                var intrand = Math.ceil(newrand);
+                if(intrand == 0){randgen();}
+                document.getElementById("main").innerText = intrand;
+            }
+        </script>
+        <style>
+            html{
+                height: 100%;
+            }
+            body{
+                /*
+                position: relative; */
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .parent{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height:100%;
+            }
+            #main{
+/*              position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%,-50%); */
+                display: block;
+                margin: auto;
+                padding: auto;
+                vertical-align: middle;
+                color: #333;
+                font-size: 30em;
+                line-height: 100%;
+            }
+        </style>
+    </head>
+    <body onload="randgen()">
+        <div class="parent">
+            <div id="main">
+            </div>
+        </div>
+    </body>
+</html>
